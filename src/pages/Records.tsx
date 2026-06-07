@@ -98,24 +98,9 @@ export const Records: React.FC = () => {
       className: 'font-medium'
     },
     {
-      header: 'Affiliation / Co.',
-      accessor: 'businessName',
-      className: 'font-medium'
-    },
-    {
-      header: 'Category / Level',
-      accessor: 'type',
-      className: 'font-semibold text-xs text-slate-500'
-    },
-    {
       header: 'Status',
       accessor: (item) => <StatusBadge type="client" status={item.status} />,
       align: 'center'
-    },
-    {
-      header: 'Date Added',
-      accessor: 'dateAdded',
-      className: 'text-xs text-slate-400 font-medium'
     }
   ];
 

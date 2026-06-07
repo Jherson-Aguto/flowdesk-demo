@@ -4,20 +4,33 @@
 @theme {
   --font-sans: 'Inter', system-ui, sans-serif;
   
-  --color-primary-50: #ecfdf5;
-  --color-primary-100: #d1fae5;
-  --color-primary-500: #10b981;
-  --color-primary-600: #059669;
-  --color-primary-700: #047857;
+  /* Accent: Vibrant Saffron / Gold (10%) */
+  --color-primary-50: #fffdf5;
+  --color-primary-100: #fef9e0;
+  --color-primary-500: #e2b13c;
+  --color-primary-600: #c99827;
+  --color-primary-700: #a37718;
   
-  --color-blue-50: #ecfdf5;
-  --color-blue-100: #d1fae5;
-  --color-blue-200: #a7f3d0;
-  --color-blue-300: #6ee7b7;
-  --color-blue-400: #34d399;
-  --color-blue-500: #10b981;
-  --color-blue-600: #059669;
-  --color-blue-700: #047857;
+  --color-blue-50: #fffdf5;
+  --color-blue-100: #fef9e0;
+  --color-blue-200: #fdf0b3;
+  --color-blue-300: #fae273;
+  --color-blue-400: #f5d045;
+  --color-blue-500: #e2b13c;
+  --color-blue-600: #c99827;
+  --color-blue-700: #a37718;
+  
+  /* Secondary Accent: Muted Saffron */
+  --color-sky-50: #fffefb;
+  --color-sky-100: #fefcf3;
+  --color-sky-500: #e9c46a;
+  --color-sky-600: #d9a752;
+  --color-sky-700: #b88a38;
+
+  /* Standard status colors */
+  --color-cyan-50: #f0fdfa;
+  --color-cyan-500: #14b8a6;
+  --color-cyan-600: #0d9488;
   
   --color-success-50: #f0fdf4;
   --color-success-500: #22c55e;
@@ -31,23 +44,37 @@
   --color-danger-500: #ef4444;
   --color-danger-600: #dc2626;
   
-  --color-neutral-50: #f8fafc;
-  --color-neutral-100: #f1f5f9;
-  --color-neutral-800: #1e293b;
-  --color-neutral-900: #0f172a;
+  /* Dominant background shades: Deep Navy (60%) */
+  --color-slate-50: #f0f4f8;
+  --color-slate-100: #dbe3ec;
+  --color-slate-200: #b9c9d9;
+  --color-slate-300: #8da6c1;
+  --color-slate-400: #6383a8;
+  --color-slate-500: #42648e;
+  --color-slate-600: #314c6f;
+  --color-slate-700: #243b57;
+  --color-slate-800: #16253b;
+  --color-slate-900: #0e1826;
+  --color-slate-950: #080f1a;
+
+  /* Secondary background shades: Cream / White (30%) */
+  --color-neutral-50: #f7f5f0;
+  --color-neutral-100: #edf1ef;
+  --color-neutral-800: #151d2a;
+  --color-neutral-900: #0a0f18;
 }
 
 body {
   font-family: 'Inter', system-ui, sans-serif;
-  background-color: #f8fafc;
-  color: #0f172a;
+  background-color: #f7f5f0;
+  color: #0e1a2b;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 .dark body {
-  background-color: #0f172a;
-  color: #f8fafc;
+  background-color: #080f1a;
+  color: #f7f5f0;
 }
 
 /* Custom scrollbars */
@@ -59,11 +86,11 @@ body {
   background: transparent;
 }
 ::-webkit-scrollbar-thumb {
-  background: rgba(156, 163, 175, 0.25);
+  background: rgba(226, 177, 60, 0.25);
   border-radius: 9999px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(156, 163, 175, 0.45);
+  background: rgba(226, 177, 60, 0.45);
 }
 
 /* Glassmorphism elements */
@@ -71,19 +98,19 @@ body {
   background-color: rgba(255, 255, 255, 0.75);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(226, 232, 240, 0.8);
+  border: 1px solid rgba(232, 229, 221, 0.8);
 }
 
 .dark .glass-panel {
-  background-color: rgba(30, 41, 59, 0.7);
+  background-color: rgba(14, 24, 38, 0.7);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(16, 185, 129, 0.15);
+  border: 1px solid rgba(226, 177, 60, 0.15);
 }
 
 /* Soft shadows */
 .soft-shadow {
-  box-shadow: 0 4px 20px -2px rgba(148, 163, 184, 0.08), 0 2px 8px -1px rgba(148, 163, 184, 0.04);
+  box-shadow: 0 4px 20px -2px rgba(14, 24, 38, 0.08), 0 2px 8px -1px rgba(14, 24, 38, 0.04);
 }
 
 .dark .soft-shadow {
@@ -102,22 +129,22 @@ body {
 input,
 select,
 textarea {
-  background-color: #0f172a;
-  color: #f8fafc;
-  border-color: #334155;
+  background-color: #080f1a;
+  color: #f7f5f0;
+  border-color: #16253b;
 }
 
 input:focus,
 select:focus,
 textarea:focus {
-  background-color: #0f172a;
-  color: #f8fafc;
-  border-color: #10b981;
+  background-color: #080f1a;
+  color: #f7f5f0;
+  border-color: #e2b13c;
   outline: none;
-  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.18);
+  box-shadow: 0 0 0 3px rgba(226, 177, 60, 0.18);
 }
 
 option {
-  background-color: #0f172a;
-  color: #f8fafc;
+  background-color: #080f1a;
+  color: #f7f5f0;
 }

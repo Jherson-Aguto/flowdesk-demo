@@ -101,21 +101,6 @@ export const Transactions: React.FC = () => {
       header: 'Status',
       accessor: (item) => <StatusBadge type="request" status={settings.statusLabels.transaction[item.status] || item.status} />,
       align: 'center'
-    },
-    {
-      header: 'Priority',
-      accessor: (item) => <StatusBadge type="priority" status={item.priority} />,
-      align: 'center'
-    },
-    {
-      header: t('assignedStaff'),
-      accessor: 'assignedStaff',
-      className: 'font-medium'
-    },
-    {
-      header: 'Due Date',
-      accessor: 'dueDate',
-      className: 'text-xs text-slate-400 font-medium'
     }
   ];
 
